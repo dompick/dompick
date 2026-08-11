@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties for sale in Mallorca, Madrid, Barcelona · Dompick Real Estate</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Montserrat & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            teal: '#00ade1',
+                            tealDark: '#0090bc',
+                            tealLight: '#e6f6fd',
+                            navy: '#1f2937',
+                            darkFooter: '#18202a',
+                            subtle: '#6b7280'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'Inter', 'sans-serif'],
+                        body: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #2d3748;
+            background-color: #ffffff;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, h4, h5, h6, .font-heading {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .hero-bg {
+            background: linear-gradient(rgba(17, 24, 39, 0.55), rgba(17, 24, 39, 0.65)), 
+                        url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+        }
+
+        .location-badge {
+            transition: all 0.25s ease;
+        }
+
+        .location-badge:hover {
+            background-color: #00ade1;
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 173, 225, 0.25);
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.15);
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background-color: #cbd5e1;
+            border-radius: 4px;
+        }
+
+        /* Toast / Message banner styling */
+        #formAlert {
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+    </style>
+</head>
+<body class="antialiased flex flex-col min-h-screen">
+
+    <!-- HEADER & NAVIGATION -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-2 group">
+                    <span class="text-3xl tracking-tight text-brand-teal font-light">
+                        dom<span class="font-black">pick</span>
+                    </span>
+                    <span class="inline-block w-2.5 h-2.5 rounded-full bg-brand-teal group-hover:scale-125 transition-transform"></span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-700 hover:text-brand-teal font-medium text-sm transition-colors">Home</a>
+                    <a href="#ai-concierge" class="text-gray-700 hover:text-brand-teal font-medium text-sm transition-colors flex items-center gap-1.5">
+                        <i class="fa-solid fa-wand-magic-sparkles text-brand-teal"></i> AI Concierge
+                    </a>
+                    <a href="#" class="text-gray-700 hover:text-brand-teal font-medium text-sm transition-colors">Blog</a>
+                    <a href="#" class="text-gray-700 hover:text-brand-teal font-medium text-sm transition-colors">About us</a>
+                    <a href="#contact" class="bg-brand-teal hover:bg-brand-tealDark text-white px-5 py-2.5 rounded-md font-semibold text-sm transition-all duration-200 shadow-sm hover:shadow">CONTACT</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden text-gray-700 hover:text-brand-teal focus:outline-none p-2 rounded-lg" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-gray-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#" class="block py-2 text-gray-700 hover:text-brand-teal font-medium">Home</a>
+            <a href="#ai-concierge" class="block py-2 text-gray-700 hover:text-brand-teal font-medium"><i class="fa-solid fa-wand-magic-sparkles text-brand-teal mr-1.5"></i> AI Concierge</a>
+            <a href="#" class="block py-2 text-gray-700 hover:text-brand-teal font-medium">Blog</a>
+            <a href="#" class="block py-2 text-gray-700 hover:text-brand-teal font-medium">About us</a>
+            <a href="#contact" class="block py-2.5 px-4 bg-brand-teal text-white text-center font-semibold rounded-md">CONTACT</a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- HERO SECTION -->
+        <section class="hero-bg text-white py-24 sm:py-32 lg:py-40 relative px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center">
+                <span class="inline-block px-3 py-1 bg-brand-teal/30 border border-brand-teal/50 rounded-full text-brand-tealLight text-xs sm:text-sm font-semibold tracking-wider uppercase mb-4">
+                    Leading Real Estate Network
+                </span>
+                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6 uppercase">
+                    Properties for sale in Mallorca, Madrid, Barcelona
+                </h1>
+                <p class="text-lg sm:text-xl md:text-2xl font-light text-gray-200 mb-4 max-w-3xl mx-auto">
+                    The real estate network with largest selection of properties in Mallorca #1
+                </p>
+                <p class="text-base sm:text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+                    Contact us and get access to our services and knowledge in the real estate business.
+                </p>
+                <div>
+                    <a href="#contact" class="inline-block bg-brand-teal hover:bg-brand-tealDark text-white font-bold px-8 py-4 rounded-lg text-base sm:text-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5">
+                        CONTACT US
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FIND YOUR HOUSE SECTION -->
+        <section class="py-16 bg-slate-50 border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mx-auto text-center mb-10">
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-800 tracking-tight uppercase mb-4">
+                        FIND YOUR HOUSE IN MALLORCA
+                    </h2>
+                    <p class="text-gray-600 text-sm sm:text-base leading-relaxed mb-4">
+                        Are you looking for a house in Mallorca? (also written Majorca, although in Spanish and Mallorquin we write Mallorca) 
+                        Do you want to enjoy a house by the sea with stunning views to the mallorcan turquoise sea? Or a house with pool to spend your summers?
+                    </p>
+                    <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+                        In our large portfolio you will find a lot of properties for sale in Mallorca: houses, townhouses, luxury villas, cozy apartments. 
+                        Try our search engine or the links below and find the property you wish.
+                    </p>
+                </div>
+
+                <!-- Locations Grid -->
+                <div class="flex flex-wrap justify-center gap-2.5 sm:gap-3 max-w-5xl mx-auto mb-12">
+                    <span class="location-badge bg-white border border-gray-300 text-slate-700 px-4 py-2 rounded-full text-xs sm:text-sm font-medium cursor-pointer shadow-sm">Alcudia</span>
+                    <span class="location-badge bg-white border border-gray-300 text-slate-700 px-4 py-2 rounded-full text-xs sm:text-sm font-medium cursor-pointer shadow-sm">Algaida</span>
+                    <span class="location-badge bg-white border border-gray-300 text-slate-700 px-4 py-2 rounded-full text-xs sm:text-sm font-medium cursor-pointer shadow-sm">Arta</span>
+                    <span class="location-badge bg-white border border-gray-300 text-slate-700 px-4 py-2 rounded-full text-xs sm:text-sm font-medium cursor-pointer shadow-sm">Binissalem</span>
+                    <span class="location-badge bg-white border border-gray-300 text-slate-700 px-4 py-2 rounded-full text-xs sm:text-sm font-medium cursor-pointer shadow-sm">Bunyola</span>
+                    <span class="location-badge bg-white border border-gray-300 text-slate-700 px-4 py-2 rounded-full text-xs sm:text-sm font-medium cursor-pointer shadow-sm">Calvia</span>
+                    <span class="location-badge bg-white border border-gray-300 text-slate-700 px-4 py-2 rounded-full text-xs sm:text-sm font-medium cursor-pointer shadow-sm">Campos</span>
+                    <span class="location-badge bg-white border border-gray-300 text-slate-700 px-4 py-2 rounded-full text-xs sm:text-sm font-medium cursor-pointer shadow-sm">Capdepera</span>
+                    <span class="location-badge bg-white border border-gray-300 text-slate-700 px-4 py-2 rounded-full text-xs sm:text-sm font-medium cursor-pointer shadow-sm">Deia</span>
+                    <span class="location-badge bg-white border border-gray-300 text-slate-700 px-4 py-2 rounded-full text-xs sm:text-sm font-medium cursor-pointer shadow-sm">Felanitx</span>
+                    <span class="location-badge bg-white border border-gray-300 text-slate-700 px-4 py-2 rounded-full text-xs sm:text-sm font-medium cursor-pointer shadow-sm">Inca</span>
+                    <span class="location-badge bg-white border border-gray-300 text-slate-700 px-4 py-2 rounded-full text-xs sm:text-sm font-medium cursor-pointer shadow-sm">Llucmajor</span>
+                    <span class="location-badge bg-white border border-gray-300 text-slate-700 px-4 py-2 rounded-full text-xs sm:text-sm font-medium cursor-pointer shadow-sm">Magaluf</span>
+                    <span class="location-badge bg-white border border-gray-300 text-slate-700 px-4 py-2 rounded-full text-xs sm:text-sm font-medium cursor-pointer shadow-sm">Soller</span>
+                    <span class="location-badge bg-white border border-gray-300 text-slate-700 px-4 py-2 rounded-full text-xs sm:text-sm font-medium cursor-pointer shadow-sm">El Toro</span>
+                    <span class="location-badge bg-white border border-gray-300 text-slate-700 px-4 py-2 rounded-full text-xs sm:text-sm font-medium cursor-pointer shadow-sm">Fornalutx</span>
+                    <span class="location-badge bg-white border border-gray-300 text-slate-700 px-4 py-2 rounded-full text-xs sm:text-sm font-medium cursor-pointer shadow-sm">Palma</span>
+                    <span class="location-badge bg-white border border-gray-300 text-slate-700 px-4 py-2 rounded-full text-xs sm:text-sm font-medium cursor-pointer shadow-sm">Pollensa</span>
+                    <span class="location-badge bg-white border border-gray-300 text-slate-700 px-4 py-2 rounded-full text-xs sm:text-sm font-medium cursor-pointer shadow-sm">Esporles</span>
+                    <span class="location-badge bg-white border border-gray-300 text-slate-700 px-4 py-2 rounded-full text-xs sm:text-sm font-medium cursor-pointer shadow-sm">Escorca</span>
+                    <span class="location-badge bg-white border border-gray-300 text-slate-700 px-4 py-2 rounded-full text-xs sm:text-sm font-medium cursor-pointer shadow-sm">Santa Ponsa</span>
+                    <span class="location-badge bg-white border border-gray-300 text-slate-700 px-4 py-2 rounded-full text-xs sm:text-sm font-medium cursor-pointer shadow-sm">Port Pollensa</span>
+                    <span class="location-badge bg-white border border-gray-300 text-slate-700 px-4 py-2 rounded-full text-xs sm:text-sm font-medium cursor-pointer shadow-sm">Port Andratx</span>
+                    <span class="location-badge bg-white border border-gray-300 text-slate-700 px-4 py-2 rounded-full text-xs sm:text-sm font-medium cursor-pointer shadow-sm">Palmanova</span>
+                    <span class="location-badge bg-white border border-gray-300 text-slate-700 px-4 py-2 rounded-full text-xs sm:text-sm font-medium cursor-pointer shadow-sm">Palma Old Town</span>
+                    <span class="location-badge bg-white border border-gray-300 text-slate-700 px-4 py-2 rounded-full text-xs sm:text-sm font-medium cursor-pointer shadow-sm">Paguera</span>
+                    <span class="location-badge bg-white border border-gray-300 text-slate-700 px-4 py-2 rounded-full text-xs sm:text-sm font-medium cursor-pointer shadow-sm">Valldemossa</span>
+                    <span class="location-badge bg-brand-teal text-white border border-brand-teal px-4 py-2 rounded-full text-xs sm:text-sm font-semibold cursor-pointer shadow-sm">Map of Mallorca</span>
+                </div>
+
+                <!-- Banner Callout -->
+                <div class="bg-brand-teal rounded-2xl p-6 sm:p-8 text-white flex flex-col md:flex-row justify-between items-center shadow-lg">
+                    <div class="mb-4 md:mb-0 text-center md:text-left">
+                        <h3 class="text-lg sm:text-xl font-bold">Contact us now and receive all information you need to buy or sell a property</h3>
+                    </div>
+                    <a href="#contact" class="bg-white text-brand-teal hover:bg-gray-100 font-bold px-6 py-3 rounded-lg text-sm sm:text-base whitespace-nowrap shadow transition-colors">
+                        Contact us
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI SMART CONCIERGE SUITE -->
+        <section id="ai-concierge" class="py-16 bg-gradient-to-b from-slate-900 to-slate-800 text-white border-b border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-10">
+                    <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-teal/20 border border-brand-teal/40 text-brand-teal text-xs font-semibold tracking-wider uppercase mb-3">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i> Powered by Gemini AI
+                    </span>
+                    <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight uppercase mb-3">
+                        DOMPICK AI REAL ESTATE CONCIERGE
+                    </h2>
+                    <p class="text-gray-300 text-sm sm:text-base">
+                        Intelligent property search, search-grounded market research, custom dream villa visualizer, and instant voice audio briefings.
+                    </p>
+                </div>
+
+                <!-- AI Feature Tabs -->
+                <div class="flex flex-wrap justify-center gap-2 mb-8 bg-slate-950/60 p-1.5 rounded-xl border border-slate-800 max-w-3xl mx-auto">
+                    <button onclick="switchAiTab('advisor')" id="tabBtn-advisor" class="ai-tab-btn px-4 py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-brand-teal text-white shadow">
+                        <i class="fa-solid fa-comments mr-1.5"></i> AI Property Advisor
+                    </button>
+                    <button onclick="switchAiTab('explorer')" id="tabBtn-explorer" class="ai-tab-btn px-4 py-2.5 rounded-lg text-xs sm:text-sm font-semibold text-gray-400 hover:text-white transition-all">
+                        <i class="fa-solid fa-magnifying-glass-location mr-1.5"></i> Town Market Insights
+                    </button>
+                    <button onclick="switchAiTab('visualizer')" id="tabBtn-visualizer" class="ai-tab-btn px-4 py-2.5 rounded-lg text-xs sm:text-sm font-semibold text-gray-400 hover:text-white transition-all">
+                        <i class="fa-solid fa-palette mr-1.5"></i> Villa Visualizer
+                    </button>
+                    <button onclick="switchAiTab('voice')" id="tabBtn-voice" class="ai-tab-btn px-4 py-2.5 rounded-lg text-xs sm:text-sm font-semibold text-gray-400 hover:text-white transition-all">
+                        <i class="fa-solid fa-volume-high mr-1.5"></i> Audio Briefing
+                    </button>
+                </div>
+
+                <!-- TAB 1: AI ADVISOR CHAT -->
+                <div id="aiTab-advisor" class="ai-tab-content max-w-4xl mx-auto bg-slate-900 border border-slate-800 rounded-2xl shadow-xl overflow-hidden flex flex-col h-[520px]">
+                    <div class="p-4 bg-slate-950/80 border-b border-slate-800 flex items-center justify-between">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-9 h-9 rounded-full bg-brand-teal flex items-center justify-center text-white text-sm font-bold shadow">
+                                <i class="fa-solid fa-robot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-white">Dompick Virtual Assistant</h4>
+                                <p class="text-xs text-brand-teal">Online · Expert in Mallorca, Madrid &amp; Barcelona</p>
+                            </div>
+                        </div>
+                        <button onclick="clearChat()" class="text-xs text-gray-400 hover:text-white px-2.5 py-1 rounded bg-slate-800 border border-slate-700">Clear</button>
+                    </div>
+
+                    <div id="chatHistory" class="flex-grow p-4 space-y-4 overflow-y-auto custom-scrollbar bg-slate-900/50">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-8 h-8 rounded-full bg-brand-teal flex items-center justify-center text-white text-xs flex-shrink-0">
+                                <i class="fa-solid fa-robot"></i>
+                            </div>
+                            <div class="bg-slate-800 text-gray-200 p-3.5 rounded-2xl rounded-tl-none text-sm max-w-[85%] border border-slate-700/60 leading-relaxed">
+                                Hola! I am your Dompick AI Real Estate Advisor. How can I help you today? Ask me about properties in Mallorca, legal procedures for non-residents, international schools, or finding your ideal home.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Suggestions -->
+                    <div class="p-2.5 bg-slate-950/40 border-t border-slate-800 flex gap-2 overflow-x-auto text-xs whitespace-nowrap custom-scrollbar">
+                        <span class="text-gray-400 py-1 pl-2 font-medium">Try asking:</span>
+                        <button onclick="setQuery('Show me 3-bedroom villas with a pool in Santa Ponsa under €1.5M')" class="bg-slate-800 hover:bg-brand-teal text-gray-300 hover:text-white px-3 py-1 rounded-full border border-slate-700 transition-colors">
+                            Villas in Santa Ponsa
+                        </button>
+                        <button onclick="setQuery('What taxes apply to non-residents buying property in Mallorca?')" class="bg-slate-800 hover:bg-brand-teal text-gray-300 hover:text-white px-3 py-1 rounded-full border border-slate-700 transition-colors">
+                            Non-resident Taxes
+                        </button>
+                        <button onclick="setQuery('Top international schools near Palma Old Town')" class="bg-slate-800 hover:bg-brand-teal text-gray-300 hover:text-white px-3 py-1 rounded-full border border-slate-700 transition-colors">
+                            International Schools
+                        </button>
+                    </div>
+
+                    <form onsubmit="handleChatSubmit(event)" class="p-3 bg-slate-950 border-t border-slate-800 flex items-center space-x-2">
+                        <input type="text" id="chatInput" placeholder="Ask anything about buying or selling property in Mallorca..." 
+                            class="flex-grow bg-slate-900 text-white placeholder-gray-500 text-sm px-4 py-3 rounded-xl border border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-teal">
+                        <button type="submit" id="chatSubmitBtn" class="bg-brand-teal hover:bg-brand-tealDark text-white px-5 py-3 rounded-xl font-semibold text-sm transition-colors flex items-center gap-2">
+                            <span>Send</span>
+                            <i class="fa-solid fa-paper-plane text-xs"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- TAB 2: TOWN MARKET EXPLORER (SEARCH GROUNDED) -->
+                <div id="aiTab-explorer" class="ai-tab-content hidden max-w-4xl mx-auto bg-slate-900 border border-slate-800 rounded-2xl shadow-xl p-6 sm:p-8">
+                    <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-magnifying-glass-location text-brand-teal"></i> Live Mallorcan Town &amp; Market Research
+                    </h3>
+                    <p class="text-gray-400 text-sm mb-6">
+                        Enter any municipality in Mallorca (e.g., Port Andratx, Deia, Alcudia, Pollensa) to get real-time market insights grounded with Google Search.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-3 mb-6">
+                        <input type="text" id="townInput" placeholder="e.g. Port Andratx, Soller, Palma Old Town" 
+                            class="flex-grow bg-slate-950 text-white placeholder-gray-500 text-sm px-4 py-3.5 rounded-xl border border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-teal">
+                        <button onclick="exploreTown()" id="exploreBtn" class="bg-brand-teal hover:bg-brand-tealDark text-white font-bold px-6 py-3.5 rounded-xl text-sm transition-colors flex items-center justify-center gap-2 whitespace-nowrap">
+                            <i class="fa-solid fa-compass"></i> Research Location
+                        </button>
+                    </div>
+
+                    <div id="explorerResult" class="hidden bg-slate-950/80 border border-slate-800 rounded-xl p-6 text-sm text-gray-300 space-y-4">
+                        <div id="explorerContent" class="leading-relaxed whitespace-pre-line"></div>
+                        <div id="explorerSources" class="pt-4 border-t border-slate-800/80 text-xs text-gray-400">
+                            <span class="font-bold text-gray-300 block mb-1">Grounded Sources:</span>
+                            <ul id="sourcesList" class="list-disc list-inside space-y-1 text-brand-teal"></ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 3: VILLA CONCEPT VISUALIZER (IMAGEN 4) -->
+                <div id="aiTab-visualizer" class="ai-tab-content hidden max-w-4xl mx-auto bg-slate-900 border border-slate-800 rounded-2xl shadow-xl p-6 sm:p-8">
+                    <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-palette text-brand-teal"></i> AI Dream Villa Visualizer
+                    </h3>
+                    <p class="text-gray-400 text-sm mb-6">
+                        Describe your ideal Mediterranean architectural vision and let Imagen 4 generate a concept design.
+                    </p>
+
+                    <div class="space-y-4 mb-6">
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-300 mb-1.5 uppercase tracking-wider">Concept Prompt</label>
+                            <textarea id="imagePrompt" rows="3" placeholder="Luxury Mediterranean stone villa in Deià Mallorca with infinity pool overlooking the ocean, terraced olive groves, golden hour lighting..." 
+                                class="w-full bg-slate-950 text-white placeholder-gray-500 text-sm p-4 rounded-xl border border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-teal"></textarea>
+                        </div>
+                        <button onclick="generateVillaImage()" id="genImgBtn" class="w-full bg-brand-teal hover:bg-brand-tealDark text-white font-bold py-3.5 px-6 rounded-xl text-sm transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-image"></i> Generate Villa Concept
+                        </button>
+                    </div>
+
+                    <div id="imageResultContainer" class="hidden flex flex-col items-center justify-center bg-slate-950 border border-slate-800 rounded-xl p-4 min-h-[300px]">
+                        <img id="generatedVillaImg" src="" alt="AI Generated Villa Concept" class="rounded-lg shadow-2xl max-h-[480px] w-full object-cover mb-3">
+                        <p class="text-xs text-gray-400 italic">Conceptual rendering powered by Imagen 4</p>
+                    </div>
+                </div>
+
+                <!-- TAB 4: AUDIO BRIEFING (TTS) -->
+                <div id="aiTab-voice" class="ai-tab-content hidden max-w-4xl mx-auto bg-slate-900 border border-slate-800 rounded-2xl shadow-xl p-6 sm:p-8">
+                    <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-volume-high text-brand-teal"></i> Audio Overview Briefing
+                    </h3>
+                    <p class="text-gray-400 text-sm mb-6">
+                        Generate a natural spoken audio briefing about buying property in Mallorca with Gemini Text-to-Speech.
+                    </p>
+
+                    <div class="space-y-4 mb-6">
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-300 mb-1.5 uppercase tracking-wider">Script / Briefing Topic</label>
+                            <textarea id="ttsPrompt" rows="3" class="w-full bg-slate-950 text-white placeholder-gray-500 text-sm p-4 rounded-xl border border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-teal">Say cheerfully: Welcome to Dompick Real Estate! Buying a home in Mallorca is an exciting journey. From Palma Old Town to the coastal villas in Andratx, our team is here to guide you every step of the way.</textarea>
+                        </div>
+
+                        <button onclick="generateAudioOverview()" id="genAudioBtn" class="w-full bg-brand-teal hover:bg-brand-tealDark text-white font-bold py-3.5 px-6 rounded-xl text-sm transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-play"></i> Generate &amp; Play Audio
+                        </button>
+                    </div>
+
+                    <div id="audioPlayerContainer" class="hidden bg-slate-950 border border-slate-800 rounded-xl p-6 flex flex-col items-center justify-center space-y-4">
+                        <div class="w-12 h-12 rounded-full bg-brand-teal/20 text-brand-teal flex items-center justify-center text-xl animate-pulse">
+                            <i class="fa-solid fa-headphones"></i>
+                        </div>
+                        <audio id="ttsAudioPlayer" controls class="w-full max-w-md"></audio>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- OUR SERVICES SECTION -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl font-extrabold text-slate-800 tracking-tight uppercase mb-2">OUR SERVICES</h2>
+                    <p class="text-xl text-brand-teal font-medium mb-6">We offer integral services in real estate for buyers, sellers and holiday rentals</p>
+                    <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+                        Since the beginning of the process we provide personalised attention. Once you contact us, a sales manager will be back to you. 
+                        She cares about your requirements and asks you information. She ensures to understand what you are thinking on and assess in any question or doubt you may have. 
+                        If needed, we may also assist you in the legal paperwork.
+                    </p>
+                </div>
+
+                <!-- Service Cards Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Card 1: For Buyers -->
+                    <div class="card-hover border border-gray-200 rounded-xl p-8 flex flex-col justify-between bg-white shadow-sm">
+                        <div>
+                            <div class="w-12 h-12 rounded-lg bg-brand-tealLight text-brand-teal flex items-center justify-center text-xl font-bold mb-6">
+                                <i class="fa-solid fa-house-chimney"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">FOR BUYERS</h3>
+                            <p class="text-brand-teal font-semibold text-sm mb-4">We help clients interested in buying a house in Mallorca</p>
+                            
+                            <div class="space-y-4 text-gray-600 text-sm leading-relaxed mb-8">
+                                <p>First, we need to know what you are looking for: a finca? a villa? an apartment? how many bedrooms? swimming pool? golf? close to the beach? close to schools or hospitals?</p>
+                                <p>The sales manager looks for properties matching your requirements and sends you a selection that fits with them. We have a huge database, if it exists, we have it.</p>
+                                <p>She asks you for feedback, fine-tunes the search and sends more properties. Once you choose a list you want to visit, we prepare the agenda and go along with you.</p>
+                            </div>
+                        </div>
+
+                        <a href="#contact" class="w-full text-center bg-slate-800 hover:bg-brand-teal text-white font-semibold py-3 rounded-lg text-sm transition-colors block">
+                            Start Now
+                        </a>
+                    </div>
+
+                    <!-- Card 2: For Sellers -->
+                    <div class="card-hover border border-gray-200 rounded-xl p-8 flex flex-col justify-between bg-white shadow-sm">
+                        <div>
+                            <div class="w-12 h-12 rounded-lg bg-brand-tealLight text-brand-teal flex items-center justify-center text-xl font-bold mb-6">
+                                <i class="fa-solid fa-key"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">FOR SELLERS</h3>
+                            <p class="text-brand-teal font-semibold text-sm mb-4">We help clients interested in selling a property in Mallorca</p>
+                            
+                            <ul class="space-y-3 text-gray-600 text-sm leading-relaxed mb-8">
+                                <li class="flex items-start">
+                                    <i class="fa-solid fa-circle-check text-brand-teal mt-1 mr-2 text-xs"></i>
+                                    <span>We have access to an international network of potential buyers, so we can sell your property quickly and at its fair price.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa-solid fa-circle-check text-brand-teal mt-1 mr-2 text-xs"></i>
+                                    <span>We are from Mallorca, so we understand perfectly your needs and concerns.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa-solid fa-circle-check text-brand-teal mt-1 mr-2 text-xs"></i>
+                                    <span>We provide professional assessment on how to sell your property optimising the trade-off between price and time.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa-solid fa-circle-check text-brand-teal mt-1 mr-2 text-xs"></i>
+                                    <span>We use home staging techniques to show the best version of your property.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa-solid fa-circle-check text-brand-teal mt-1 mr-2 text-xs"></i>
+                                    <span>We ensure discretion if required. Your property may not be published online, but we will show it to interested clients.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <a href="#contact" class="w-full text-center bg-slate-800 hover:bg-brand-teal text-white font-semibold py-3 rounded-lg text-sm transition-colors block">
+                            Start Now
+                        </a>
+                    </div>
+
+                    <!-- Card 3: For Holiday Rentals -->
+                    <div class="card-hover border border-gray-200 rounded-xl p-8 flex flex-col justify-between bg-white shadow-sm">
+                        <div>
+                            <div class="w-12 h-12 rounded-lg bg-brand-tealLight text-brand-teal flex items-center justify-center text-xl font-bold mb-6">
+                                <i class="fa-solid fa-umbrella-beach"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">FOR HOLIDAY RENTALS</h3>
+                            <p class="text-brand-teal font-semibold text-sm mb-4">We also provide services of holiday rental</p>
+                            
+                            <p class="text-gray-600 text-sm mb-4">If you want to rent your property we can manage everything:</p>
+                            <ul class="space-y-3 text-gray-600 text-sm leading-relaxed mb-8">
+                                <li class="flex items-center">
+                                    <i class="fa-solid fa-check text-brand-teal mr-2 text-sm"></i>
+                                    <span>Home staging and photographs</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fa-solid fa-check text-brand-teal mr-2 text-sm"></i>
+                                    <span>Promotion</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fa-solid fa-check text-brand-teal mr-2 text-sm"></i>
+                                    <span>Reservations</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fa-solid fa-check text-brand-teal mr-2 text-sm"></i>
+                                    <span>Check-in and check-out</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <a href="#contact" class="w-full text-center bg-slate-800 hover:bg-brand-teal text-white font-semibold py-3 rounded-lg text-sm transition-colors block">
+                            Start Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CLIENT TESTIMONIALS SECTION -->
+        <section class="py-20 bg-slate-900 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl font-extrabold tracking-tight uppercase mb-2">CLIENTS TESTIMONIALS</h2>
+                    <p class="text-brand-teal font-medium text-lg">Our aim is to collect happy clients</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-slate-800 border border-slate-700/60 p-8 rounded-2xl relative flex flex-col justify-between">
+                        <div class="text-brand-teal text-4xl mb-4 font-serif">“</div>
+                        <p class="text-gray-300 text-base italic leading-relaxed mb-6">
+                            I was a little hesitant to buy a house abroad, but Dompick has made it very easy. I haven't had to look at each of the properties one by one. Instead, they've steered me toward only the properties that best suit my tastes and personality. Without a doubt I'd recommend them!
+                        </p>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 rounded-full bg-brand-teal flex items-center justify-center font-bold text-white text-sm">
+                                E
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-base">Elizabeth</h4>
+                                <span class="text-xs text-gray-400">Buyer in Mallorca</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="bg-slate-800 border border-slate-700/60 p-8 rounded-2xl relative flex flex-col justify-between">
+                        <div class="text-brand-teal text-4xl mb-4 font-serif">“</div>
+                        <p class="text-gray-300 text-base italic leading-relaxed mb-6">
+                            Before buying my house in Spain, I was worried about the legal issues. How do I get a residency permit? How do I ask for a mortgage from a Spanish bank? The team at Dompick helped me with everything.
+                        </p>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 rounded-full bg-brand-teal flex items-center justify-center font-bold text-white text-sm">
+                                I
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-base">Irina</h4>
+                                <span class="text-xs text-gray-400">Homeowner</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- KNOW MORE ABOUT REAL ESTATE IN MALLORCA SECTION -->
+        <section class="py-20 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-800 tracking-tight uppercase">
+                        KNOW MORE ABOUT REAL ESTATE IN MALLORCA
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Post 1 -->
+                    <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm card-hover flex flex-col">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Majorca coastline" class="w-full h-48 object-cover">
+                        <div class="p-6 flex-grow flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-800 mb-3 hover:text-brand-teal transition-colors">
+                                    <a href="#">7 Majorca facts: all you must know before coming</a>
+                                </h3>
+                                <p class="text-gray-600 text-xs sm:text-sm leading-relaxed mb-4">
+                                    If you haven't been at Majorca or you just landed on the island, this is the ultimate guide with selected Majorca facts to help you navigate your first hours on this territory and avoid getting lost.
+                                </p>
+                            </div>
+                            <a href="#" class="text-brand-teal font-semibold text-xs sm:text-sm hover:underline flex items-center">
+                                Read more <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Post 2 -->
+                    <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm card-hover flex flex-col">
+                        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=600&q=80" alt="International School" class="w-full h-48 object-cover">
+                        <div class="p-6 flex-grow flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-800 mb-3 hover:text-brand-teal transition-colors">
+                                    <a href="#">International schools in Majorca</a>
+                                </h3>
+                                <p class="text-gray-600 text-xs sm:text-sm leading-relaxed mb-4">
+                                    Majorca is one of the most prepared destinations for foreigners in Spain, due its abundance of high level international schools. We hope you enjoy our article about international schools in Majorca!
+                                </p>
+                            </div>
+                            <a href="#" class="text-brand-teal font-semibold text-xs sm:text-sm hover:underline flex items-center">
+                                Read more <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Post 3 -->
+                    <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm card-hover flex flex-col">
+                        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=600&q=80" alt="Banking in Spain" class="w-full h-48 object-cover">
+                        <div class="p-6 flex-grow flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-800 mb-3 hover:text-brand-teal transition-colors">
+                                    <a href="#">Opening a bank account in Spain for a non-resident</a>
+                                </h3>
+                                <p class="text-gray-600 text-xs sm:text-sm leading-relaxed mb-4">
+                                    Opening a bank account in Spain might look very difficult but it's really not that complicated. Spanish legislation sets differences between residents and non-residents when it comes to open accounts at banks.
+                                </p>
+                            </div>
+                            <a href="#" class="text-brand-teal font-semibold text-xs sm:text-sm hover:underline flex items-center">
+                                Read more <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRUST AND EXPERIENCE SECTION -->
+        <section class="py-16 bg-white border-y border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-2xl font-extrabold text-slate-800 tracking-tight uppercase mb-2">TRUST AND EXPERIENCE</h2>
+                <p class="text-gray-600 text-sm sm:text-base max-w-3xl mx-auto mb-10">
+                    We have participated in well-known entrepreneurship programs and have collaborations with real estate organizations and universities.
+                </p>
+
+                <!-- Partner Badges -->
+                <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-10 grayscale opacity-80 hover:grayscale-0 transition-all">
+                    <span class="px-5 py-2.5 bg-gray-100 rounded-md font-bold text-slate-700 text-base tracking-wide border border-gray-200">ellas2</span>
+                    <span class="px-5 py-2.5 bg-gray-100 rounded-md font-bold text-slate-700 text-base tracking-wide border border-gray-200">US Embassy</span>
+                    <span class="px-5 py-2.5 bg-gray-100 rounded-md font-bold text-slate-700 text-base tracking-wide border border-gray-200">RTVE</span>
+                    <span class="px-5 py-2.5 bg-gray-100 rounded-md font-bold text-slate-700 text-base tracking-wide border border-gray-200">Altamira</span>
+                    <span class="px-5 py-2.5 bg-gray-100 rounded-md font-bold text-slate-700 text-base tracking-wide border border-gray-200">Sareb</span>
+                    <span class="px-5 py-2.5 bg-gray-100 rounded-md font-bold text-slate-700 text-base tracking-wide border border-gray-200">Servihabitat</span>
+                    <span class="px-5 py-2.5 bg-gray-100 rounded-md font-bold text-slate-700 text-base tracking-wide border border-gray-200">uc3m</span>
+                    <span class="px-5 py-2.5 bg-gray-100 rounded-md font-bold text-slate-700 text-base tracking-wide border border-gray-200">urjc</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT DOMPICK SECTION -->
+        <section class="py-20 bg-white">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-extrabold text-slate-800 tracking-tight uppercase mb-2">ABOUT DOMPICK</h2>
+                    <p class="text-xl text-brand-teal font-semibold">Leading real estate network in Mallorca</p>
+                </div>
+
+                <div class="prose prose-slate max-w-none text-gray-600 text-sm sm:text-base leading-relaxed space-y-5">
+                    <p>
+                        Dompick has the largest portfolio of properties in Mallorca thanks to its wide network and partnerships with the most selected real estate agencies. We established partnerships with more than 150 agencies and have a portfolio of more than 7,000 properties.
+                    </p>
+                    <p>
+                        We cover all kind of properties for sale: luxury villas to relax in, nice apartments in the city or the beach, country houses in Mallorca's countryside, typical mallorcan fincas. Best choices either for living or investing. We have presence in all the island. In most fashion areas of Palma Old Town, in the demanded south west of the island in Calvia, Andratx, Santa Ponsa, in charming villages of Soller, Alcudia and Pollensa; in the popular marinas of Port Andratx and Port Pollensa; in beach places such as Santa Ponsa and Palmanova.
+                    </p>
+                    <p>
+                        We offer a unique, high quality service. Our team is passionate to get always the best deal for you in property transactions. All steps of the purchase are professionally addressed. And with no hidden costs for the buyer, 100% transparency.
+                    </p>
+                    <p>
+                        Our main focus are international buyers, we speak 9 languages including English, Russian and French.
+                    </p>
+                    <p class="pt-2">
+                        <a href="#" class="inline-flex items-center text-brand-teal font-semibold hover:underline">
+                            You can visit dompick in Russian here
+                            <i class="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT US SECTION -->
+        <section id="contact" class="py-20 bg-slate-50 border-t border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-extrabold text-slate-800 tracking-tight uppercase">CONTACT US</h2>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                    <!-- Left: Contact Details -->
+                    <div class="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold text-slate-800 mb-6">Get In Touch</h3>
+                            <div class="space-y-6">
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-10 h-10 rounded-lg bg-brand-tealLight text-brand-teal flex items-center justify-center flex-shrink-0">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-slate-800 text-sm">Office Address</h4>
+                                        <p class="text-gray-600 text-sm mt-0.5">Calle Piamonte 23, 28004 Madrid</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-10 h-10 rounded-lg bg-brand-tealLight text-brand-teal flex items-center justify-center flex-shrink-0">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-slate-800 text-sm">Email Us</h4>
+                                        <p class="text-gray-600 text-sm mt-0.5">
+                                            <a href="mailto:hola@dompick.com" class="hover:text-brand-teal transition-colors">hola@dompick.com</a>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-10 h-10 rounded-lg bg-brand-tealLight text-brand-teal flex items-center justify-center flex-shrink-0">
+                                        <i class="fa-solid fa-phone"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-slate-800 text-sm">Call / Whatsapp</h4>
+                                        <p class="text-gray-600 text-sm mt-0.5">
+                                            <a href="tel:+34637900413" class="hover:text-brand-teal transition-colors">+34 637 900 413</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-8 border-t border-gray-100">
+                            <p class="text-xs text-gray-500">
+                                We are waiting to hear from you. Email us directly or complete the form and our sales manager will get back to you promptly.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Right: Form -->
+                    <div class="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm relative">
+                        <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                            <div>
+                                <label for="email" class="block text-sm font-semibold text-gray-700 mb-1">Email *</label>
+                                <input type="email" id="email" required placeholder="your.email@example.com" 
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-teal focus:border-transparent text-sm transition-all">
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-sm font-semibold text-gray-700 mb-1">Message *</label>
+                                <textarea id="message" rows="5" required placeholder="Tell us what property you are looking for..." 
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-teal focus:border-transparent text-sm transition-all"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-brand-teal hover:bg-brand-tealDark text-white font-bold py-3.5 px-6 rounded-lg text-sm shadow transition-colors flex items-center justify-center space-x-2">
+                                <span>Send Message</span>
+                                <i class="fa-solid fa-paper-plane text-xs"></i>
+                            </button>
+                        </form>
+
+                        <!-- Form Alert Modal / Notification -->
+                        <div id="formAlert" class="hidden absolute inset-0 bg-white/95 rounded-2xl flex flex-col items-center justify-center p-8 text-center">
+                            <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-2xl mb-4">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Message Sent!</h3>
+                            <p class="text-gray-600 text-sm mb-6 max-w-xs">Thank you for reaching out. A sales manager will contact you shortly.</p>
+                            <button onclick="resetAlert()" class="bg-brand-teal text-white font-semibold px-6 py-2 rounded-md text-sm">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-darkFooter text-gray-300 pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-gray-800">
+                <!-- Col 1: CONTACT -->
+                <div>
+                    <h3 class="text-white font-bold tracking-wider uppercase text-sm mb-4 border-b border-brand-teal/40 pb-2 inline-block">
+                        CONTACT
+                    </h3>
+                    <ul class="space-y-2.5 text-xs sm:text-sm text-gray-400">
+                        <li><span class="text-gray-200">Phone</span> +34 637 900 413</li>
+                        <li><span class="text-gray-200">Whatsapp</span> +34 637 900 413</li>
+                        <li><a href="mailto:hola@dompick.com" class="hover:text-brand-teal">hola@dompick.com</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 2: PROPERTIES FOR SALE -->
+                <div>
+                    <h3 class="text-white font-bold tracking-wider uppercase text-sm mb-4 border-b border-brand-teal/40 pb-2 inline-block">
+                        PROPERTIES FOR SALE
+                    </h3>
+                    <ul class="space-y-2.5 text-xs sm:text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-brand-teal transition-colors">Properties in Calvia</a></li>
+                        <li><a href="#" class="hover:text-brand-teal transition-colors">Property for sale in Palma</a></li>
+                        <li><a href="#" class="hover:text-brand-teal transition-colors">Property for sale in Arta</a></li>
+                        <li><a href="#" class="hover:text-brand-teal transition-colors">Property in Llucmajor</a></li>
+                        <li><a href="#" class="hover:text-brand-teal transition-colors">Property in Santa Ponsa</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: FOLLOW US -->
+                <div>
+                    <h3 class="text-white font-bold tracking-wider uppercase text-sm mb-4 border-b border-brand-teal/40 pb-2 inline-block">
+                        FOLLOW US
+                    </h3>
+                    <div class="flex space-x-3 mt-1">
+                        <a href="#" aria-label="Twitter" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-brand-teal flex items-center justify-center text-white transition-colors">
+                            <i class="fa-brands fa-twitter text-sm"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-brand-teal flex items-center justify-center text-white transition-colors">
+                            <i class="fa-brands fa-instagram text-sm"></i>
+                        </a>
+                        <a href="#" aria-label="LinkedIn" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-brand-teal flex items-center justify-center text-white transition-colors">
+                            <i class="fa-brands fa-linkedin-in text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 4: DOMPICK BRAND -->
+                <div>
+                    <h3 class="text-white font-bold tracking-wider uppercase text-sm mb-4 border-b border-brand-teal/40 pb-2 inline-block">
+                        DOMPICK
+                    </h3>
+                    <p class="text-xs sm:text-sm text-gray-400 mb-3">
+                        Made with passion in Palma &amp; Madrid.
+                    </p>
+                    <p class="text-xs text-gray-500">
+                        Copyright &copy; 2020 Dompick. All rights reserved.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Bottom Credits -->
+            <div class="pt-8 text-center text-xs text-gray-500">
+                Dompick Real Estate Network &middot; Mallorca &middot; Madrid &middot; Barcelona
+            </div>
+        </div>
+    </footer>
+
+    <!-- COOKIE CONSENT BANNER -->
+    <div id="cookieBanner" class="fixed bottom-0 left-0 right-0 bg-slate-900/95 text-white p-4 shadow-2xl z-50 backdrop-blur-md border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p class="text-xs sm:text-sm text-gray-300 text-center sm:text-left">
+                We use cookies to ensure that we give you the best experience on our website. If you continue to use this site we will assume that you are happy with it.
+            </p>
+            <button onclick="acceptCookies()" class="bg-brand-teal hover:bg-brand-tealDark text-white px-6 py-2 rounded-md font-semibold text-xs sm:text-sm transition-colors whitespace-nowrap shadow">
+                Ok
+            </button>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT CONTROLLERS -->
+    <script>
+        /* Mobile Navbar Toggle Functionality */
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        /* Cookie Banner Handler */
+        function acceptCookies() {
+            const banner = document.getElementById('cookieBanner');
+            banner.style.opacity = '0';
+            banner.style.transition = 'opacity 0.3s ease';
+            setTimeout(() => {
+                banner.style.display = 'none';
+            }, 300);
+        }
+
+        /* Contact Form Submission Handling */
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const alertModal = document.getElementById('formAlert');
+            alertModal.classList.remove('hidden');
+            document.getElementById('contactForm').reset();
+        }
+
+        function resetAlert() {
+            const alertModal = document.getElementById('formAlert');
+            alertModal.classList.add('hidden');
+        }
+    </script>
+
+    <!-- GEMINI API INTEGRATION CONTROLLER -->
+    <script>
+        /* Tab Switching Logic */
+        function switchAiTab(tabName) {
+            document.querySelectorAll('.ai-tab-content').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll('.ai-tab-btn').forEach(btn => {
+                btn.classList.remove('bg-brand-teal', 'text-white', 'shadow');
+                btn.classList.add('text-gray-400');
+            });
+
+            document.getElementById(`aiTab-${tabName}`).classList.remove('hidden');
+            const activeBtn = document.getElementById(`tabBtn-${tabName}`);
+            activeBtn.classList.add('bg-brand-teal', 'text-white', 'shadow');
+            activeBtn.classList.remove('text-gray-400');
+        }
+
+        /* Exponential Backoff Fetch Helper */
+        async function fetchWithBackoff(url, options, retries = 3, delay = 1000) {
+            try {
+                const res = await fetch(url, options);
+                if (!res.ok) {
+                    if (res.status === 429 && retries > 0) {
+                        await new Promise(resolve => setTimeout(resolve, delay));
+                        return fetchWithBackoff(url, options, retries - 1, delay * 2);
+                    }
+                    throw new Error(`HTTP ${res.status}`);
+                }
+                return await res.json();
+            } catch (err) {
+                if (retries > 0) {
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                    return fetchWithBackoff(url, options, retries - 1, delay * 2);
+                }
+                throw err;
+            }
+        }
+
+        /* 1. AI ADVISOR CHAT (gemini-3-flash-preview) */
+        const chatHistoryList = [];
+
+        function setQuery(text) {
+            document.getElementById('chatInput').value = text;
+        }
+
+        function clearChat() {
+            chatHistoryList.length = 0;
+            const historyContainer = document.getElementById('chatHistory');
+            historyContainer.innerHTML = `
+                <div class="flex items-start space-x-3">
+                    <div class="w-8 h-8 rounded-full bg-brand-teal flex items-center justify-center text-white text-xs flex-shrink-0">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <div class="bg-slate-800 text-gray-200 p-3.5 rounded-2xl rounded-tl-none text-sm max-w-[85%] border border-slate-700/60 leading-relaxed">
+                        Chat reset! How can I assist your real estate search today?
+                    </div>
+                </div>`;
+        }
+
+        async function handleChatSubmit(e) {
+            e.preventDefault();
+            const inputEl = document.getElementById('chatInput');
+            const userMsg = inputEl.value.trim();
+            if (!userMsg) return;
+
+            inputEl.value = '';
+            appendChatMessage('user', userMsg);
+
+            const submitBtn = document.getElementById('chatSubmitBtn');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin text-xs"></i> Thinking...`;
+
+            // Append loading indicator
+            const loadingId = 'loading-' + Date.now();
+            appendLoadingMessage(loadingId);
+
+            const apiKey = "";
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
+
+            const systemPrompt = "You are Dompick AI Concierge, a highly knowledgeable, professional, and welcoming luxury real estate advisor specializing in Mallorca, Madrid, and Barcelona. Provide informative, helpful, and concise real estate insights, neighborhood advice, and buying guidance.";
+
+            chatHistoryList.push({ role: "user", parts: [{ text: userMsg }] });
+
+            const payload = {
+                contents: chatHistoryList,
+                systemInstruction: { parts: [{ text: systemPrompt }] }
+            };
+
+            try {
+                const data = await fetchWithBackoff(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                removeMessage(loadingId);
+                const botReply = data.candidates?.[0]?.content?.parts?.[0]?.text || "I apologize, I could not process your query right now. Please try again.";
+                
+                chatHistoryList.push({ role: "model", parts: [{ text: botReply }] });
+                appendChatMessage('model', botReply);
+            } catch (err) {
+                removeMessage(loadingId);
+                appendChatMessage('model', "Sorry, I ran into an issue retrieving real estate details. Please try again shortly.");
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = `<span>Send</span> <i class="fa-solid fa-paper-plane text-xs"></i>`;
+            }
+        }
+
+        function appendChatMessage(role, text) {
+            const container = document.getElementById('chatHistory');
+            const wrapper = document.createElement('div');
+            wrapper.className = "flex items-start space-x-3 " + (role === 'user' ? 'justify-end' : '');
+
+            if (role === 'user') {
+                wrapper.innerHTML = `
+                    <div class="bg-brand-teal text-white p-3.5 rounded-2xl rounded-tr-none text-sm max-w-[85%] leading-relaxed shadow">
+                        ${escapeHtml(text)}
+                    </div>
+                    <div class="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center text-white text-xs flex-shrink-0">
+                        <i class="fa-solid fa-user"></i>
+                    </div>`;
+            } else {
+                wrapper.innerHTML = `
+                    <div class="w-8 h-8 rounded-full bg-brand-teal flex items-center justify-center text-white text-xs flex-shrink-0">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <div class="bg-slate-800 text-gray-200 p-3.5 rounded-2xl rounded-tl-none text-sm max-w-[85%] border border-slate-700/60 leading-relaxed">
+                        ${formatMarkdownText(text)}
+                    </div>`;
+            }
+
+            container.appendChild(wrapper);
+            container.scrollTop = container.scrollHeight;
+        }
+
+        function appendLoadingMessage(id) {
+            const container = document.getElementById('chatHistory');
+            const wrapper = document.createElement('div');
+            wrapper.id = id;
+            wrapper.className = "flex items-start space-x-3";
+            wrapper.innerHTML = `
+                <div class="w-8 h-8 rounded-full bg-brand-teal flex items-center justify-center text-white text-xs flex-shrink-0">
+                    <i class="fa-solid fa-robot"></i>
+                </div>
+                <div class="bg-slate-800 text-gray-400 p-3.5 rounded-2xl rounded-tl-none text-sm border border-slate-700/60 flex items-center space-x-2">
+                    <i class="fa-solid fa-circle-notch fa-spin text-brand-teal"></i>
+                    <span>Consulting Dompick database...</span>
+                </div>`;
+            container.appendChild(wrapper);
+            container.scrollTop = container.scrollHeight;
+        }
+
+        function removeMessage(id) {
+            const el = document.getElementById(id);
+            if (el) el.remove();
+        }
+
+        /* 2. SEARCH GROUNDED TOWN EXPLORER */
+        async function exploreTown() {
+            const townInput = document.getElementById('townInput').value.trim();
+            if (!townInput) return;
+
+            const btn = document.getElementById('exploreBtn');
+            const resContainer = document.getElementById('explorerResult');
+            const contentEl = document.getElementById('explorerContent');
+            const sourcesList = document.getElementById('sourcesList');
+
+            btn.disabled = true;
+            btn.innerHTML = `<i class="fa-solid fa-circle-notch fa-spin"></i> Researching...`;
+            resContainer.classList.add('hidden');
+
+            const apiKey = "";
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
+
+            const userQuery = `Provide a comprehensive real estate overview for ${townInput} in Mallorca. Include lifestyle vibe, key attractions, typical property prices, and accessibility to Palma or airport. Use Google Search grounding.`;
+
+            const payload = {
+                contents: [{ parts: [{ text: userQuery }] }],
+                tools: [{ "google_search": {} }]
+            };
+
+            try {
+                const data = await fetchWithBackoff(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const candidate = data.candidates?.[0];
+                const text = candidate?.content?.parts?.[0]?.text || "No insights found for this location.";
+                contentEl.innerHTML = formatMarkdownText(text);
+
+                // Extract Grounding Sources
+                sourcesList.innerHTML = '';
+                const attributions = candidate?.groundingMetadata?.groundingAttributions || [];
+                const validSources = attributions
+                    .map(a => ({ uri: a.web?.uri, title: a.web?.title }))
+                    .filter(s => s.uri && s.title);
+
+                if (validSources.length > 0) {
+                    validSources.forEach(src => {
+                        const li = document.createElement('li');
+                        li.innerHTML = `<a href="${src.uri}" target="_blank" rel="noopener" class="underline hover:text-white">${escapeHtml(src.title)}</a>`;
+                        sourcesList.appendChild(li);
+                    });
+                    document.getElementById('explorerSources').classList.remove('hidden');
+                } else {
+                    document.getElementById('explorerSources').classList.add('hidden');
+                }
+
+                resContainer.classList.remove('hidden');
+            } catch (err) {
+                contentEl.innerHTML = "<span class='text-red-400'>Error retrieving research. Please check your query and try again.</span>";
+                resContainer.classList.remove('hidden');
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = `<i class="fa-solid fa-compass"></i> Research Location`;
+            }
+        }
+
+        /* 3. VILLA CONCEPT VISUALIZER (imagen-4.0-generate-001) */
+        async function generateVillaImage() {
+            const prompt = document.getElementById('imagePrompt').value.trim();
+            if (!prompt) return;
+
+            const btn = document.getElementById('genImgBtn');
+            const imgContainer = document.getElementById('imageResultContainer');
+            const imgEl = document.getElementById('generatedVillaImg');
+
+            btn.disabled = true;
+            btn.innerHTML = `<i class="fa-solid fa-circle-notch fa-spin"></i> Rendering Concept...`;
+
+            const apiKey = "";
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-generate-001:predict?key=${apiKey}`;
+
+            const payload = {
+                instances: [{ prompt: prompt }],
+                parameters: { sampleCount: 1 }
+            };
+
+            try {
+                const data = await fetchWithBackoff(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (data.predictions && data.predictions[0]?.bytesBase64Encoded) {
+                    imgEl.src = `data:image/png;base64,${data.predictions[0].bytesBase64Encoded}`;
+                    imgContainer.classList.remove('hidden');
+                } else {
+                    alert("Image generation failed. Please try a different prompt.");
+                }
+            } catch (err) {
+                alert("Error connecting to Imagen API. Please try again.");
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = `<i class="fa-solid fa-image"></i> Generate Villa Concept`;
+            }
+        }
+
+        /* 4. AUDIO OVERVIEW BRIEFING (gemini-2.5-flash-preview-tts) */
+        async function generateAudioOverview() {
+            const prompt = document.getElementById('ttsPrompt').value.trim();
+            if (!prompt) return;
+
+            const btn = document.getElementById('genAudioBtn');
+            const container = document.getElementById('audioPlayerContainer');
+            const audioPlayer = document.getElementById('ttsAudioPlayer');
+
+            btn.disabled = true;
+            btn.innerHTML = `<i class="fa-solid fa-circle-notch fa-spin"></i> Generating Audio...`;
+
+            const apiKey = "";
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${apiKey}`;
+
+            const payload = {
+                contents: [{ parts: [{ text: prompt }] }],
+                generationConfig: {
+                    responseModalities: ["AUDIO"],
+                    speechConfig: {
+                        voiceConfig: { prebuiltVoiceConfig: { voiceName: "Kore" } }
+                    }
+                }
+            };
+
+            try {
+                const data = await fetchWithBackoff(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const part = data?.candidates?.[0]?.content?.parts?.[0];
+                const audioData = part?.inlineData?.data;
+                const mimeType = part?.inlineData?.mimeType;
+
+                if (audioData && mimeType && mimeType.startsWith("audio/")) {
+                    const sampleRateMatch = mimeType.match(/rate=(\d+)/);
+                    const sampleRate = sampleRateMatch ? parseInt(sampleRateMatch[1], 10) : 24000;
+
+                    const pcmBuffer = base64ToArrayBuffer(audioData);
+                    const pcm16 = new Int16Array(pcmBuffer);
+                    const wavBlob = pcmToWav(pcm16, sampleRate);
+                    
+                    audioPlayer.src = URL.createObjectURL(wavBlob);
+                    container.classList.remove('hidden');
+                    audioPlayer.play();
+                } else {
+                    alert("Could not generate audio response.");
+                }
+            } catch (err) {
+                alert("Audio generation error. Please try again.");
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = `<i class="fa-solid fa-play"></i> Generate &amp; Play Audio`;
+            }
+        }
+
+        /* Audio Helper Utility Functions */
+        function base64ToArrayBuffer(base64) {
+            const binaryString = window.atob(base64);
+            const len = binaryString.length;
+            const bytes = new Uint8Array(len);
+            for (let i = 0; i < len; i++) {
+                bytes[i] = binaryString.charCodeAt(i);
+            }
+            return bytes.buffer;
+        }
+
+        function pcmToWav(pcm16, sampleRate) {
+            const numChannels = 1;
+            const byteRate = sampleRate * numChannels * 2;
+            const blockAlign = numChannels * 2;
+            const dataSize = pcm16.length * 2;
+            const buffer = new ArrayBuffer(44 + dataSize);
+            const view = new DataView(buffer);
+
+            writeString(view, 0, 'RIFF');
+            view.setUint32(4, 36 + dataSize, true);
+            writeString(view, 8, 'WAVE');
+            writeString(view, 12, 'fmt ');
+            view.setUint32(16, 16, true);
+            view.setUint16(20, 1, true);
+            view.setUint16(22, numChannels, true);
+            view.setUint32(24, sampleRate, true);
+            view.setUint32(28, byteRate, true);
+            view.setUint16(32, blockAlign, true);
+            view.setUint16(34, 16, true);
+            writeString(view, 36, 'data');
+            view.setUint32(40, dataSize, true);
+
+            let offset = 44;
+            for (let i = 0; i < pcm16.length; i++, offset += 2) {
+                view.setInt16(offset, pcm16[i], true);
+            }
+
+            return new Blob([buffer], { type: 'audio/wav' });
+        }
+
+        function writeString(view, offset, string) {
+            for (let i = 0; i < string.length; i++) {
+                view.setUint8(offset + i, string.charCodeAt(i));
+            }
+        }
+
+        function escapeHtml(str) {
+            return str.replace(/[&<>"']/g, match => ({
+                '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+            })[match]);
+        }
+
+        function formatMarkdownText(text) {
+            let escaped = escapeHtml(text);
+            return escaped
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                .replace(/\*(.*?)\*/g, '<em>$1</em>')
+                .replace(/\n\n/g, '<br><br>')
+                .replace(/\n/g, '<br>');
+        }
+    </script>
+</body>
+</html>
